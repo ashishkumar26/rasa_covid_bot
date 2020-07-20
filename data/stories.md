@@ -1,10 +1,27 @@
 ## happy_path
 * greet
   - utter_greet
-* covid_search{country:india}
-    - utter_ask_country
 * inform{"country":"india"}
+  - action_covid
+  - utter_ask_country
+* thanks
+  - utter_goodbye
+
+## happy_path1
+* greet
+  - utter_greet
+* inform{"country":"uk"}
+  - action_covid
+  - utter_ask_country
+* thanks
+  - utter_goodbye
+
+## happy_path2
+* greet
+  - utter_greet
+* covid_search{country:"usa"}
     - action_covid
+    - utter_ask_country
 * thanks
   - utter_goodbye
 

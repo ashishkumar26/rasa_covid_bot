@@ -19,6 +19,8 @@
 - [uk](country)
 - [usa](country)
 - [australia](country)
+- [china](country)
+- [pakistan](country)
 
 ## intent:goodbye
 - bye

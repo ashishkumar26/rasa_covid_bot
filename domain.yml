@@ -17,12 +17,13 @@ entities:
 - flag
 slots:
   country:
-    type: unfeaturized
+    type: text
   flag:
-    type: unfeaturized
+    type: text
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hi, I am COVID bot. Please provide me with the country name or short code
+      to get you the latest COVID stats.
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -35,7 +36,8 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_ask_country:
-  - text: Please provide the country name to get the COVID-19 updates for you.
+  - text: Would you like to search the COVID stats for any other country? Please provide
+      the country name.
 actions:
 - utter_greet
 - utter_cheer_up
@@ -44,5 +46,6 @@ actions:
 - utter_goodbye
 - utter_iamabot
 - action_covid
+- action_slot_reset
 - utter_ask_country
 - utter_flag

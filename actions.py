@@ -1,5 +1,6 @@
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
+from rasa_sdk.events import AllSlotsReset
 import requests
 import logging
 import time
@@ -16,7 +17,7 @@ def _convert(n):
                         int(math.floor(0 if n == 0 else math.log10(abs(n))/3))))
     return '{:.0f}{}'.format(n / 10**(3 * millidx), names[millidx])
 
-class ActionWeather(Action):
+class ActionCovid(Action):
     def name(self):
       return 'action_covid'
 
@@ -59,3 +60,11 @@ class ActionWeather(Action):
         response = """Country Name : {} \n Total Population :{} \n Total Reported Cases : {} \n Total Recovered : {} \n Total Deaths : {} \n Total Active : {} \n Last Updated : {}""".format(country_name, population, totalCases, recovered, deaths, active, tm)
         dispatcher.utter_message(image=flag, text=response)
         return []
+
+
+class ActionResetAllSlots(Action):
+    def name(self):
+        return "action_slot_reset"
+
+    def run(self, dispatcher, tracker, domain):
+        return [AllSlotsReset()]
