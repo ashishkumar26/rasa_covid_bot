@@ -9,6 +9,17 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- inform
+- thanks
+- covid_search
+entities:
+- country
+- flag
+slots:
+  country:
+    type: unfeaturized
+  flag:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -23,6 +34,8 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_ask_country:
+  - text: Please provide the country name to get the COVID-19 updates for you.
 actions:
 - utter_greet
 - utter_cheer_up
@@ -30,3 +43,6 @@ actions:
 - utter_happy
 - utter_goodbye
 - utter_iamabot
+- action_covid
+- utter_ask_country
+- utter_flag

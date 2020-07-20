@@ -1,8 +1,12 @@
-## happy path
+## happy_path
 * greet
   - utter_greet
-* mood_great
-  - utter_happy
+* covid_search{country:india}
+    - utter_ask_country
+* inform{"country":"india"}
+    - action_covid
+* thanks
+  - utter_goodbye
 
 ## sad path 1
 * greet

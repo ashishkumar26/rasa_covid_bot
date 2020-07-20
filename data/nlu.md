@@ -6,6 +6,20 @@
 - good evening
 - hey there
 
+## intent:covid_search
+- Please tell me the COVID updates of [india](country)
+- [India's](country) current update
+- [india](country) covid update
+- what is the current satus of covid in [uk](country)
+- [usa](country) updates
+- [australia](country) covid data
+
+## intent:inform
+- [india](country)
+- [uk](country)
+- [usa](country)
+- [australia](country)
+
 ## intent:goodbye
 - bye
 - goodbye
